@@ -1,0 +1,65 @@
+###
+
+GET http://localhost:5000/api/auth
+
+
+###
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "peter lim",
+    "password": "123456"
+}
+
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "peter lim",
+    "password": "123456"
+}
+
+
+###
+
+POST http://localhost:5000/api/posts/create-post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM1Yjk1MzQ2YWQzYmVjODNhNTJiZGMiLCJpYXQiOjE2NTcxMjUzMzJ9.518_7RvoDZpmKMTBQ63qCBeT0ED8EPHFbAUU9Qb9hHQ
+
+{
+  "title": "VueJS",
+  "description": "VueJS 2021",
+  "url": "vuejs.com",
+  "status": "LEARNING"
+}
+
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM1Yjk1MzQ2YWQzYmVjODNhNTJiZGMiLCJpYXQiOjE2NTcxMjUzMzJ9.518_7RvoDZpmKMTBQ63qCBeT0ED8EPHFbAUU9Qb9hHQ
+
+
+###
+
+PUT http://localhost:5000/api/posts/update-post/62c5bd5e2a22d113a1330bd0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM1Yjk1MzQ2YWQzYmVjODNhNTJiZGMiLCJpYXQiOjE2NTcxMjUzMzJ9.518_7RvoDZpmKMTBQ63qCBeT0ED8EPHFbAUU9Qb9hHQ
+
+{
+  "title": "Vue",
+  "description": "VUEEEEE",
+  "url": "https://vuejs.org",
+  "status": "LEARNING"
+}
+
+
+###
+
+DELETE http://localhost:5000/api/posts/delete-post/62c5bd5e2a22d113a1330bd0s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmM1Yjk1MzQ2YWQzYmVjODNhNTJiZGMiLCJpYXQiOjE2NTcxMjUzMzJ9.518_7RvoDZpmKMTBQ63qCBeT0ED8EPHFbAUU9Qb9hHQ
